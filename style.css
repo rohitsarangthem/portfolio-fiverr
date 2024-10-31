@@ -119,12 +119,19 @@ ul.social-wraper {
       transform: translateY(0%);
       opacity: 1;
     }
-  }
-  
-  .fadeInUp-animation {
+}
+  /*Newww*/
+
+.fadeInUp-animation {
     animation: 3s fadeInUp;
-  }
-  
+}
+
+.text-content.in-view{
+    animation: 1.5s fadeInUp;
+}
+
+
+/*Newww*/  
 
 .social-menu-items, .social-menu-items-1 {
     color: rgba(83, 82, 86, 0.8);
