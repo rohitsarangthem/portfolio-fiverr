@@ -148,31 +148,31 @@
 
 <div class="two-flex-container">
     <div class="two-flex-wraper">
-        <div class="other-link-1">
-            <img src="https://framerusercontent.com/images/4eW0D4VuVxlyKwQS24FxVSdBl9Q.png?scale-down-to=512" class="two-image fadeInUp-animation" alt="">
+        <div class="other-link-1 animate">
+            <img src="https://framerusercontent.com/images/4eW0D4VuVxlyKwQS24FxVSdBl9Q.png?scale-down-to=512" class="two-image" alt="">
             <div class="two-content">
-                <div class="text-content">
-                    <h1 class="other-link-title fadeInUp-animation">Reimagining banking for millennials</h1>
+                <div class="text-content ">
+                    <h1 class="other-link-title fadeInUp-animation ">Reimagining banking for millennials</h1>
                     <p class="other-link-para fadeInUp-animation">UX case study on Millennials financial needs and how it can be applied to Maybank app.</p>
                     <span class="date-time-two-flex fadeInUp-animation">Published on Feb 17, 2021 · 9 min read · In Bootcamp</span>
                 </div>
                 <div class="text-content-icon">
-                    <span><img class="icon" src="icons/arrow_forward_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+                    <span><img class="icon fadeInUp-animation" src="icons/arrow_forward_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
                 </div>
              </div>
             
         </div>
 
-        <div class="other-link-1">
-            <img src="https://framerusercontent.com/images/4eW0D4VuVxlyKwQS24FxVSdBl9Q.png?scale-down-to=512" class="two-image fadeInUp-animation" alt="">
+        <div class="other-link-1 animate">
+            <img src="https://framerusercontent.com/images/4eW0D4VuVxlyKwQS24FxVSdBl9Q.png?scale-down-to=512" class="two-image" alt="">
             <div class="two-content">
-                <div class="text-content">
-                    <h1 class="other-link-title fadeInUp-animation">Reimagining banking for millennials</h1>
+                <div class="text-content ">
+                    <h1 class="other-link-title fadeInUp-animation ">Reimagining banking for millennials</h1>
                     <p class="other-link-para fadeInUp-animation">UX case study on Millennials financial needs and how it can be applied to Maybank app.</p>
                     <span class="date-time-two-flex fadeInUp-animation">Published on Feb 17, 2021 · 9 min read · In Bootcamp</span>
                 </div>
                 <div class="text-content-icon">
-                    <span><img class="icon" src="icons/arrow_forward_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+                    <span><img class="icon fadeInUp-animation" src="icons/arrow_forward_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
                 </div>
              </div>
             
@@ -310,5 +310,32 @@ navLinks.classList.toggle('active');
     });
     </script>
 <!-------Mobile Navigation----->
+
+<!---------Fade in up animation-------->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+// Use Intersection Observer to determine if objects are within the viewport
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      return;
+    }
+    entry.target.classList.remove('in-view');
+  });
+});
+
+// Get all the elements with the .animate class applied
+const allAnimatedElements = document.querySelectorAll('.animate');
+
+// Add the observer to each of those elements
+allAnimatedElements.forEach((element) => observer.observe(element));
+
+}); 
+
+</script>
+
+
 </body>
 </html>
